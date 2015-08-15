@@ -1,0 +1,35 @@
+plugin.tx_jhsmilieviewhelper {
+	view {
+		templateRootPath = {$plugin.tx_jhsmilieviewhelper.view.templateRootPath}
+		partialRootPath = {$plugin.tx_jhsmilieviewhelper.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_jhsmilieviewhelper.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_jhsmilieviewhelper.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+
+	}
+	# Copy actual page.jsFooterInline to setup to prevent from data-loss
+	setup < page.jsFooterInline
+	setup {
+		# add fluidtemplate
+		201 = FLUIDTEMPLATE
+		201 {
+			file = {$plugin.tx_jhsmilieviewhelper.view.templateRootPath}Javascript/Default.html
+			variables {
+				smiliePath = TEXT
+				smiliePath.value < plugin.tx_smilie.smiliePath
+				fileExt = TEXT
+				fileExt.value < plugin.tx_smilie.fileExt
+				#selector < plugin.tx_jhsmilieviewhelper.settings
+			}
+		}
+	}
+}
+//add javascript to footer
+page.jsFooterInline < plugin.tx_jhsmilieviewhelper.setup

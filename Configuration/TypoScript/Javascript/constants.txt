@@ -1,0 +1,11 @@
+plugin.tx_jhsmilieviewhelper.view {
+	# cat=plugin.tx_jhsmilieviewhelper/file; type=string; label=Path to template root
+	templateRootPath = EXT:jh_smilie_viewhelper/Resources/Private/Templates/
+	# cat=plugin.tx_jhsmilieviewhelper/file; type=string; label=Path to template partials
+	partialRootPath = EXT:jh_smilie_viewhelper/Resources/Private/Partials/
+	# cat=plugin.tx_jhmagnificpopup/file; type=string; label=Path to template layouts
+	layoutRootPath = EXT:jh_smilie_viewhelper/Resources/Private/Layouts/
+}
+
+plugin.tx_jhsmilieviewhelper.settings {
+}

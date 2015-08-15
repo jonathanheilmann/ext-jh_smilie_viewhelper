@@ -1,0 +1,14 @@
+{namespace jh=Tx_JhSmilieViewhelper_ViewHelpers}
+
+;function replaceSmilie(input) {
+	var output = input;
+	<f:for each="{jh:getSmilies()}" as="smilies" key="key">
+		<f:for each="{smilies}" as="smilie">
+			output = output.replace(new RegExp(escapeRegExp('{smilie}'), 'g'), '<f:image src="{smiliePath}/{key}.{fileExt}" alt="{smilie}" />');
+		</f:for>
+	</f:for>
+	return output;
+};
+;function escapeRegExp(string) {
+    return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+};
