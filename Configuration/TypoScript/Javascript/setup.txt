@@ -26,7 +26,6 @@ plugin.tx_jhsmilieviewhelper {
 				smiliePath.value < plugin.tx_smilie.smiliePath
 				fileExt = TEXT
 				fileExt.value < plugin.tx_smilie.fileExt
-				#selector < plugin.tx_jhsmilieviewhelper.settings
 			}
 		}
 	}
