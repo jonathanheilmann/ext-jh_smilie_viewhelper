@@ -1,9 +1,6 @@
 {namespace jh=Tx_JhSmilieViewhelper_ViewHelpers}
 
 ;function replaceSmilie(input) {
-	console.log(typeof input)
-	console.log(input);
-	if (typeof input == 'undefined') return '';
 	var output = input;
 	<f:for each="{jh:getSmilies()}" as="smilies" key="key">
 		<f:for each="{smilies}" as="smilie">
