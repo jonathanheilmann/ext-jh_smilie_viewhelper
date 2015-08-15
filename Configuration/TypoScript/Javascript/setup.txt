@@ -5,7 +5,7 @@ plugin.tx_jhsmilieviewhelper {
 		layoutRootPath = {$plugin.tx_jhsmilieviewhelper.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_jhsmilieviewhelper.persistence.storagePid}
+		# storagePid = {$plugin.tx_jhsmilieviewhelper.persistence.storagePid}
 	}
 	features {
 		# uncomment the following line to enable the new Property Mapper.
@@ -26,7 +26,6 @@ plugin.tx_jhsmilieviewhelper {
 				smiliePath.value < plugin.tx_smilie.smiliePath
 				fileExt = TEXT
 				fileExt.value < plugin.tx_smilie.fileExt
-				#selector < plugin.tx_jhsmilieviewhelper.settings
 			}
 		}
 	}
